@@ -1,0 +1,10 @@
+#lệnh khởi động lại apache
+sudo systemctl restart apache2
+
+#Lệnh clear cache và nạp lại cấu hình để file .env có hiệu quả
+cd /var/www/html/bagisto
+php artisan config:clear
+php artisan route:clear
+php artisan cache:clear
+php artisan view:clear
+php artisan config:cache
